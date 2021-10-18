@@ -1,0 +1,23 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "description": "qaChallenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "smoke-testing": "testcafe chrome ./pom/test/ --test-meta type=smoke",
+    "test-login": "testcafe chrome:headless, safari:headless ./pom/test/LoginSuccess.test.js"
+  },
+  "author": "marco donjuan",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "env": "0.0.2",
+    "eslint": "^8.0.1",
+    "node": "^16.10.0"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "testcafe": "^1.16.1"
+  }
+}
