@@ -4,10 +4,12 @@ import { STANDARD_USER } from "../data/Roles";
 import { t } from "testcafe";
 
 fixture ('CDelete all Tasks ')
-    .page `${URLS.LOGINURL}`;
-
-test.only ('Delete tasks', async t =>{
-    await t.useRole(STANDARD_USER)
+    .page `${URLS.LOGINURL}`
+    .beforeEach(async()=>{
+        await t.useRole(STANDARD_USER) 
+    })
+test ('Delete tasks', async t =>{
+    await t
     .wait(2000)
     .click(Todaypage.inboxButton)
     .wait(1000)
