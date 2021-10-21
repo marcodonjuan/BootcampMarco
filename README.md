@@ -1,7 +1,15 @@
 # Bootcamp
- QA Bootcamp Exercise
-author: Marco Donjuan
+QA Bootcamp Exercise author: Marco Donjuan
 
-Command to run tests: testcafe chrome ./pom/test/   
-Command to run login headless mode: npm run test-login
-Did not set up the smoke testing suite as there seems to be something wrong with my install and didn't recognize the test metadata, i'll aim to fix it by the next deliverable at the latest.
+Command to run tests: npm run test
+Command to run login headless mode: npm run test-login 
+
+Add env file and declare EMAIL and PASSWORD for Todoist page.
+
+Project Structure
+
+|POM
+|
+|---data    Constants and roles
+|---pages   Todoist pages
+|---test    Test scripts.
