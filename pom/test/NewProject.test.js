@@ -8,7 +8,7 @@ fixture ('Create new Project ')
     .beforeEach(async()=>{
         await t.useRole(STANDARD_USER) 
     })    
-test.only ('Create a Favorite, Colored Project', async t =>{
+test.meta('type', 'smoke') ('Create a Favorite, Colored Project', async t =>{
         await Todaypage.NewProjectFavorite()
         await t.expect(Todaypage.projectLabel.innerText).eql("Bootcamp")
 })

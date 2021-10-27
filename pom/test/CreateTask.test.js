@@ -9,12 +9,12 @@ fixture ('Create new task ')
         await t.useRole(STANDARD_USER) 
     })
          
-test ('Add one task', async t =>{
+test.meta('type', 'smoke') ('Add one task', async t =>{
     await t
     .wait(2000)
     .click(Todaypage.plusButton)
     .typeText(Todaypage.taskInputField, 'New', { speed: 0.01 })
-    .click(Todaypage.addTaskButton)
+    .click(Todaypage.addTaskButton, {speed:0.01})
     await t.expect(Todaypage.taskList.exists).ok()
 })
 test ('Add one task due Tomorrow', async t =>{
