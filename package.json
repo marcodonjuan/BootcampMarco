@@ -4,20 +4,21 @@
   "description": "qaChallenge",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./pom/test/",
-    "smoke-testing": "testcafe chrome ./pom/test/ --test-meta type=smoke",
-    "test-login": "testcafe chrome:headless, safari:headless ./pom/test/LoginSuccess.test.js --reporter html: ./pom/test/report.html"
+    "test": "testcafe chrome ./pom/test/ --reporter xunit",
+    "smoke-testing": "testcafe chrome ./pom/test/ --test-meta type=smoke --reporter xunit",
+    "test-login": "testcafe chrome:headless, safari:headless ./pom/test/LoginSuccess.test.js --reporter xunit"
   },
   "author": "marco donjuan",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
     "env": "0.0.2",
-    "eslint": "^8.0.1",
     "node": "^16.10.0",
-    "testcafe-reporter-html": "^1.4.6"
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-xunit": "^2.1.0"
   },
   "devDependencies": {
+    "eslint": "^8.1.0",
     "faker": "^5.5.3",
     "testcafe": "^1.16.1"
   }
