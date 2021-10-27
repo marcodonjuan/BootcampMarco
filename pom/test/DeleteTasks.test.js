@@ -14,12 +14,12 @@ test('Delete tasks', async t =>{
     .click(Todaypage.inboxButton)
     .wait(1000)
         var count=0
-        while (count <10){
+        while (count <11){
         await t
         .hover(Todaypage.taskList)
-        .click(Todaypage.moreActions, {speed:0.01})
-        .click(Todaypage.deleteTaskButton, {speed:0.01})
-        .click(Todaypage.deleteConfirmation, {speed:0.01})
+        .click(Todaypage.moreActions, {speed:0.05})
+        .click(Todaypage.deleteTaskButton, {speed:0.05})
+        .click(Todaypage.deleteConfirmation, {speed:0.05})
         count++;
     
     }
