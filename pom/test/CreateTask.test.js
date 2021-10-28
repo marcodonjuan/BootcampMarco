@@ -14,7 +14,7 @@ test.meta('type', 'smoke') ('Add one task', async t =>{
     .wait(2000)
     .click(Todaypage.plusButton)
     .typeText(Todaypage.taskInputField, 'New', { speed: 0.01 })
-    .click(Todaypage.addTaskButton, {speed:0.01})
+    .click(Todaypage.addTaskButton, {speed:0.5})
     await t.expect(Todaypage.taskList.exists).ok()
 })
 test ('Add one task due Tomorrow', async t =>{

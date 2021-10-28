@@ -11,15 +11,14 @@ fixture ('Delete  Tasks ')
 test('Delete tasks', async t =>{
     await t
     .wait(2000)
-    .click(Todaypage.inboxButton)
-    .wait(1000)
+    
         var count=0
-        while (count <11){
+        while (count <10){
         await t
         .hover(Todaypage.taskList)
-        .click(Todaypage.moreActions, {speed:0.05})
-        .click(Todaypage.deleteTaskButton, {speed:0.05})
-        .click(Todaypage.deleteConfirmation, {speed:0.05})
+        .click(Todaypage.moreActions, {speed:0.5})
+        .click(Todaypage.deleteTaskButton, {speed:0.5})
+        .click(Todaypage.deleteConfirmation, {speed:0.5})
         count++;
     
     }
@@ -32,8 +31,8 @@ test.meta('type', 'smoke') ('Delete one task', async t =>{
     .wait(1000)
         await t
         .hover(Todaypage.taskList)
-        .click(Todaypage.moreActions, {speed:0.01})
-        .click(Todaypage.deleteTaskButton, {speed:0.01})
-        .click(Todaypage.deleteConfirmation, {speed:0.01})
+        .click(Todaypage.moreActions, {speed:0.5})
+        .click(Todaypage.deleteTaskButton, {speed:0.5})
+        .click(Todaypage.deleteConfirmation, {speed:0.5})
         await t.expect(Todaypage.taskList.exists).notOk() 
     })
