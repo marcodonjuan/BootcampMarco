@@ -22,6 +22,7 @@ class TodayPage {
         this.moreActions = Selector ('[class="more_actions_button"]')
         this.deleteTaskButton =Selector ('[class="icon_menu_item__content"]').withExactText('Delete task')
         this.deleteConfirmation = Selector ('[class="ist_button ist_button_red"]')
+        this.TodayButton=  Selector('[class="item_content"]').withExactText('Today')
     }
     async TaskMultiple (){
         var count = 0;
@@ -55,7 +56,7 @@ class TodayPage {
         .click(this.projectColorButton.withText('Berry Red'))
         .click(this.favoriteSwitch)
         .wait(2000)
-        .click(this.addProjectButton, {speed:0.01}) 
+        .click(this.addProjectButton, {speed:0.5}) 
     }
 }
 export default new TodayPage
